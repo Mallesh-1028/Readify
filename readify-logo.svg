@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bookGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C75B39"/>
+      <stop offset="100%" style="stop-color:#8B3A2B"/>
+    </linearGradient>
+  </defs>
+  <!-- Open book shape -->
+  <path fill="url(#bookGrad)" d="M8 12v40c0 2 4 4 12 4h4V16h-4c-4 0-8 2-12-4zm48 0v40c0 2-4 4-12 4h-4V16h4c4 0 8 2 12-4z"/>
+  <path fill="#F5E6D3" d="M20 16h24v36H20z"/>
+  <path fill="#C75B39" d="M32 20v28M28 24h8M28 30h8M28 36h8"/>
+  <!-- Bookmark/leaf accent -->
+  <path fill="#8B3A2B" d="M44 8L52 20v36l-8-4V8z" opacity="0.9"/>
+</svg>

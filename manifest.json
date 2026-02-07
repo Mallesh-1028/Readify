@@ -1,0 +1,17 @@
+{
+  "name": "Readify - Book Recommendation Platform",
+  "short_name": "Readify",
+  "description": "A platform that encourages reading with book recommendations, progress tracking, and interactive features.",
+  "start_url": "./Home_Page.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#C75B39",
+  "icons": [
+    {
+      "src": "readify-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

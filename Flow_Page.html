@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Readify | Reading Flow</title>
+
+  <link rel="stylesheet" href="Main.css">
+  <link rel="stylesheet" href="Flow.css">
+  <link rel="icon" type="image/svg+xml" href="readify-logo.svg">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+<div id="page-loader" class="page-loader">
+  <div class="loader-spinner"></div>
+  <p>Loading...</p>
+</div>
+<header class="header">
+  <a href="Home_Page.html" class="logo-link">
+    <img src="readify-logo.svg" alt="Readify" class="logo">
+    <span class="logo-text">Readify</span>
+  </a>
+  <nav class="nav">
+    <ul class="nav-links">
+      <li><a href="Home_Page.html">Home</a></li>
+      <li><a href="Explorer_Page.html">Explorer</a></li>
+      <li><a href="Tracker_Page.html">Tracker</a></li>
+      <li><a href="Recommender_page.html">Recommender</a></li>
+      <li><a class="active" href="Flow_Page.html">Flow</a></li>
+      <li><a href="Feedback_Page.html">Feedback</a></li>
+    </ul>
+  </nav>
+  <div class="header-actions">
+    <button class="theme-toggle" type="button" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
+    <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<main class="container">
+  <section class="page-head reveal-on-scroll">
+    <h1>Reading Flow</h1>
+    <p>Use cozy sounds and keep track of completed books.</p>
+  </section>
+
+  <section class="card">
+    <h2>Cozy Sounds</h2>
+
+    <div class="sound-row">
+      <button id="playRain" type="button">Rain</button>
+      <button id="playFire" type="button">Fire</button>
+      <button id="playOcean" type="button">Ocean</button>
+      <button id="playCafe" type="button">Cafe</button>
+      <button id="playForest" type="button">Forest</button>
+      <button id="playPiano" type="button">Piano</button>
+      <button id="stopSound" type="button" class="danger">Stop</button>
+    </div>
+
+    <audio id="rainAudio" src="Rain.mp3" loop></audio>
+    <audio id="fireAudio" src="Fire.mp3" loop></audio>
+    <audio id="oceanAudio" src="Ocean.mp3" loop></audio>
+    <audio id="cafeAudio" src="Cafe.mp3" loop></audio>
+    <audio id="forestAudio" src="Forest.mp3" loop></audio>
+    <audio id="pianoAudio" src="Piano.mp3" loop></audio>
+
+    <p id="soundMsg" class="msg"></p>
+  </section>
+
+  <section class="card">
+    <h2>Completed Books</h2>
+
+    <div class="complete-row">
+      <input id="completedInput" type="text" placeholder="Enter completed book title...">
+      <button id="addCompletedBtn" type="button">Add</button>
+    </div>
+
+    <ul id="completedList" class="list"></ul>
+    <button id="clearCompletedBtn" class="danger" type="button">Clear List</button>
+  </section>
+</main>
+
+<script src="Main.js"></script>
+</body>
+</html>

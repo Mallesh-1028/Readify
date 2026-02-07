@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Readify | Tracker</title>
+
+  <link rel="stylesheet" href="Main.css">
+  <link rel="stylesheet" href="Tracker.css">
+  <link rel="icon" type="image/svg+xml" href="readify-logo.svg">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+<div id="page-loader" class="page-loader">
+  <div class="loader-spinner"></div>
+  <p>Loading...</p>
+</div>
+<header class="header">
+  <a href="Home_Page.html" class="logo-link">
+    <img src="readify-logo.svg" alt="Readify" class="logo">
+    <span class="logo-text">Readify</span>
+  </a>
+  <nav class="nav">
+    <ul class="nav-links">
+      <li><a href="Home_Page.html">Home</a></li>
+      <li><a href="Explorer_Page.html">Explorer</a></li>
+      <li><a class="active" href="Tracker_Page.html">Tracker</a></li>
+      <li><a href="Recommender_page.html">Recommender</a></li>
+      <li><a href="Flow_Page.html">Flow</a></li>
+      <li><a href="Feedback_Page.html">Feedback</a></li>
+    </ul>
+  </nav>
+  <div class="header-actions">
+    <button class="theme-toggle" type="button" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
+    <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<main class="container">
+  <section class="page-head reveal-on-scroll">
+    <h1>Reading Progress Tracker</h1>
+    <p>Enter your pages to calculate completion and estimate finish time.</p>
+  </section>
+
+  <section class="tracker-grid">
+    <form id="trackerForm" class="card">
+      <label for="totalPages">Total Pages</label>
+      <input id="totalPages" type="number" min="1" required>
+
+      <label for="pagesRead">Pages Read</label>
+      <input id="pagesRead" type="number" min="0" required>
+
+      <label for="pagesPerDay">Pages Per Day</label>
+      <input id="pagesPerDay" type="number" min="1" required>
+
+      <div class="btn-row">
+        <button type="submit">Calculate</button>
+        <button id="saveBtn" class="secondary" type="button">Save</button>
+      </div>
+
+      <p id="trackerMsg" class="msg"></p>
+    </form>
+
+    <div class="card">
+      <h2>Results</h2>
+
+      <div class="row">
+        <span>Completed</span>
+        <strong id="percentOut">0%</strong>
+      </div>
+
+      <div class="bar-wrap">
+        <div id="bar" class="bar"></div>
+      </div>
+
+      <div class="row">
+        <span>Estimated finish</span>
+        <strong id="finishOut">—</strong>
+      </div>
+
+      <div class="saved">
+        <h3>Saved Progress</h3>
+        <p id="savedOut">Nothing saved yet.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="Main.js"></script>
+</body>
+</html>

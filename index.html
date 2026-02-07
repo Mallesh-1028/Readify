@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Readify – Your cosy corner for book discovery, reading habits, and mindful reading sessions.">
+  <title>Readify | Home</title>
+  <link rel="stylesheet" href="Main.css">
+  <link rel="stylesheet" href="Home.css">
+  <link rel="icon" type="image/svg+xml" href="readify-logo.svg">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+<div id="page-loader" class="page-loader">
+  <div class="loader-spinner"></div>
+  <p>Loading...</p>
+</div>
+<header class="header">
+  <a href="Home_Page.html" class="logo-link">
+    <img src="readify-logo.svg" alt="Readify" class="logo">
+    <span class="logo-text">Readify</span>
+  </a>
+  <nav class="nav">
+    <ul class="nav-links">
+      <li><a class="active" href="Home_Page.html">Home</a></li>
+      <li><a href="Explorer_Page.html">Explorer</a></li>
+      <li><a href="Tracker_Page.html">Tracker</a></li>
+      <li><a href="Recommender_page.html">Recommender</a></li>
+      <li><a href="Flow_Page.html">Flow</a></li>
+      <li><a href="Feedback_Page.html">Feedback</a></li>
+    </ul>
+  </nav>
+  <div class="header-actions">
+    <button class="theme-toggle" type="button" onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙</button>
+    <button class="hamburger" type="button" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-image">
+    <img id="quote-photo" src="https://i.pravatar.cc/300?img=1" alt="Author">
+  </div>
+  <div class="hero-text">
+    <span class="quote-mark">"</span>
+    <h1 id="quote-text">One must always be careful of books, and what is inside them.</h1>
+    <p id="quote-author" class="quote-author">— Cassandra Clare</p>
+    <div id="streakBadge" class="streak-badge">
+      <span id="streakCount">0</span> day streak
+    </div>
+  </div>
+</section>
+
+<section class="author-of-day reveal-on-scroll">
+  <h2>Spotlight Author</h2>
+  <div class="author-card">
+    <h3 id="author-name">—</h3>
+    <p id="author-desc">—</p>
+  </div>
+</section>
+
+<section class="features reveal-on-scroll">
+  <h2>What You Can Do</h2>
+  <div class="features-container">
+    <div class="feature-card">
+      <div class="icon">📚</div>
+      <h3>Explore Books</h3>
+      <p>Browse our collection and filter by genre, title, or author to find your next read.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📊</div>
+      <h3>Track Progress</h3>
+      <p>Log your pages and reading speed to see your completion % and estimated finish date.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🎲</div>
+      <h3>Get Recommendations</h3>
+      <p>Pick genre and length – we'll randomly suggest a book and you can save it to your list.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🎧</div>
+      <h3>Reading Flow</h3>
+      <p>Turn on ambient sounds, track finished books, and focus on your reading sessions.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="Explorer_Page.html">Explorer</a>
+    <a href="Tracker_Page.html">Tracker</a>
+    <a href="Recommender_page.html">Recommender</a>
+    <a href="Flow_Page.html">Flow</a>
+    <a href="Feedback_Page.html">Feedback</a>
+  </div>
+  <div class="newsletter">
+    <h3>Stay in the loop</h3>
+    <form id="newsletterForm" onsubmit="saveEmail(); return false;">
+      <input type="email" id="email" placeholder="Your email" required aria-label="Email address">
+      <button type="submit">Subscribe</button>
+    </form>
+    <p id="msg" class="newsletter-msg"></p>
+  </div>
+</footer>
+
+<script src="Main.js"></script>
+</body>
+</html>
