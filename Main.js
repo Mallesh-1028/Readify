@@ -74,11 +74,11 @@ function initQuoteRotation() {
   if (!quoteText || !quoteAuthor) return;
 
   const quotes = [
-    { text: "So many books, so little time.", author: "Frank Zappa", photo: "https://i.pravatar.cc/300?img=11" },
-    { text: "A reader lives a thousand lives before he dies.", author: "George R.R. Martin", photo: "https://i.pravatar.cc/300?img=12" },
-    { text: "The more that you read, the more things you will know.", author: "Dr. Seuss", photo: "https://i.pravatar.cc/300?img=13" },
-    { text: "Books are a uniquely portable magic.", author: "Stephen King", photo: "https://i.pravatar.cc/300?img=14" },
-    { text: "Reading is dreaming with open eyes.", author: "Anissa Djefri", photo: "https://i.pravatar.cc/300?img=15" }
+    { text: "So many books, so little time.", author: "Frank Zappa", photo: "Frank Zappa.jpg" },
+    { text: "A reader lives a thousand lives before he dies.", author: "George R.R. Martin", photo: "George R.R. Martin.jpg" },
+    { text: "The more that you read, the more things you will know.", author: "Dr. Seuss", photo: "Dr. Seuss.jpg" },
+    { text: "Books are a uniquely portable magic.", author: "Stephen King", photo: "Stephen King.jpg" },
+    { text: "Reading is dreaming with open eyes.", author: "Anissa Djefri", photo: "Anissa Djefri.jpg" }
   ];
 
   let index = 0;
